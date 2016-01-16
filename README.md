@@ -1,1 +1,3 @@
-# android-To-Do
+# Android-To-Do
+
+A simple android To-Do app
