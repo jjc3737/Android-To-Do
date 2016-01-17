@@ -4,7 +4,7 @@ Android-To-Do is an android app thatallows building a todo list and basic todo i
 
 Submittied by: Jane Chung 
 
-Time spent: 2 hours spent in total 
+Time spent: 3 hours spent in total 
 
 ## User Stories 
 The following required functionality is completed:
@@ -13,12 +13,15 @@ The following required functionality is completed:
 *[o] User can persist todo items and retrieve them properly on app restart
 
 The following optional features are implemented:
-I've attempted to use Dialog Fragment and have completed half way through. 
+Used Dialog Fragment instead of intent to another activity to show edit screen.  
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/FTOnnXF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Walkthrough of optional feature 
+<img src="http://i.imgur.com/XX8b9kN.gif" title="Video Walkthrough width ='' alt='Video Walkthrough' />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
