@@ -22,7 +22,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/)
 
 <img src='http://i.imgur.com/FTOnnXF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src="http://i.imgur.com/XX8b9kN.gif" title="Video Walkthrough width ='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/XX8b9kN.gif' title='Video Walkthrough' width ='' alt='Video Walkthrough' />
 
 ## Notes 
 I plan to spend more time getting more of the optional features done. The only frustration was everything required looking up the definition and docs. 
