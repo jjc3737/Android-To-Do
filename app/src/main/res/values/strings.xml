@@ -5,4 +5,8 @@
     <string name="title_activity_edit_item">EditItemActivity</string>
     <string name="editItem">Edit Item Below:</string>
     <string name="saveEdit">Save</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="etFragmentTitle">Edit Item Below</string>
+    <string name="editFragmentSaveButton">Save</string>
 </resources>

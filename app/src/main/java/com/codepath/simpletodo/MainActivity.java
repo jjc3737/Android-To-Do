@@ -2,6 +2,7 @@ package com.codepath.simpletodo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,11 +16,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EditItemFragment.EditItemFragmentListener{
     ArrayList<String> items;
     ArrayAdapter<String> itemsAdapter;
     ListView lvItems;
     EditText etEditText;
+    int editPosition;
 
     static private final int GET_EDITED_TEXT_REQUEST_CODE = 1;
 
@@ -34,10 +36,12 @@ public class MainActivity extends AppCompatActivity {
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(MainActivity.this, EditItemActivity.class);
-                i.putExtra("position", position);
-                i.putExtra("itemText", items.get(position));
-                startActivityForResult(i, GET_EDITED_TEXT_REQUEST_CODE);
+//                Intent i = new Intent(MainActivity.this, EditItemActivity.class);
+//                i.putExtra("position", position);
+//                i.putExtra("itemText", items.get(position));
+//                startActivityForResult(i, GET_EDITED_TEXT_REQUEST_CODE);
+                editPosition = position;
+                showEditFragment(items.get(position));
             }
         });
 
@@ -83,6 +87,19 @@ public class MainActivity extends AppCompatActivity {
         writeItems();
     }
 
+    private void showEditFragment(String textToEdit) {
+//        EditItemFragment editItemFragment = EditItemFragment.newInstance("Edit Item", textToEdit);
+//        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//        transaction.replace(R.id.fragment_container, editItemFragment);
+//        transaction.addToBackStack(null);
+//
+//        transaction.commit();
+        FragmentManager fm = getSupportFragmentManager();
+        EditItemFragment editItemFragment = EditItemFragment.newInstance("Edit Item", textToEdit);
+        editItemFragment.show(fm, "fragment_edit_item");
+
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -93,5 +110,12 @@ public class MainActivity extends AppCompatActivity {
             itemsAdapter.notifyDataSetChanged();
             writeItems();
         }
+    }
+
+    @Override
+    public void onFinishEditItem(String inputText) {
+        items.set(editPosition, inputText);
+        itemsAdapter.notifyDataSetChanged();
+        writeItems();
     }
 }
