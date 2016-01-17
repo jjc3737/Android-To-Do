@@ -18,12 +18,11 @@ Used Dialog Fragment instead of intent to another activity to show edit screen.
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
+GIF created with [LiceCap](http://www.cockos.com/licecap/)
+
 <img src='http://i.imgur.com/FTOnnXF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-Walkthrough of optional feature 
+
 <img src="http://i.imgur.com/XX8b9kN.gif" title="Video Walkthrough width ='' alt='Video Walkthrough' />
-
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes 
 I plan to spend more time getting more of the optional features done. The only frustration was everything required looking up the definition and docs. 
