@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Controller.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,9 +16,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EditItemActivity"
-            android:label="@string/title_activity_edit_item"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".Controller.EditItemActivity"
+            android:label="@string/title_activity_edit_item" />
+        <activity
+            android:name=".Controller.TodoItemDetailActivity"
+            android:label="@string/title_activity_todo_item_detail"></activity>
     </application>
 
 </manifest>

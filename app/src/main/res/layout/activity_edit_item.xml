@@ -1,26 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.codepath.simpletodo.EditItemActivity">
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:scrollbarStyle="outsideOverlay" >
 
-    <android.support.design.widget.AppBarLayout
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:stretchColumns="0" >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <TableRow>
 
-    </android.support.design.widget.AppBarLayout>
+            <TextView
+                android:padding="1dip"
+                android:text="@string/todo_label"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/todoPrimaryDark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
 
-    <include layout="@layout/content_edit_item" />
+            <EditText
+                android:id="@+id/et_todo_title"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="@string/todo_hint"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp" />
+        </TableRow>
 
-</android.support.design.widget.CoordinatorLayout>
+        <View
+            android:layout_height="1dip"
+            android:background="@color/todoPrimary" />
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/todoPrimaryDark"
+                android:text="@string/due_date_label"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <DatePicker
+                android:id="@+id/date_picker_due_date"
+                android:calendarViewShown="true" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="@color/todoPrimary" />
+
+        <TableRow>
+
+            <TextView
+                android:padding="1dip"
+                android:text="@string/priority_label"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/todoPrimaryDark"/>
+
+            <Spinner
+                android:id="@+id/spinner_priority"
+                android:layout_weight="1"
+                android:entries="@array/priority_string_array_values"
+                android:gravity="right"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="@color/todoPrimary" />
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/todoPrimaryDark"
+                android:text="@string/status_label"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_status"
+                android:entries="@array/status_string_array_values"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

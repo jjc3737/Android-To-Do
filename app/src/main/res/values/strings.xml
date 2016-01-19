@@ -5,8 +5,47 @@
     <string name="title_activity_edit_item">EditItemActivity</string>
     <string name="editItem">Edit Item Below:</string>
     <string name="saveEdit">Save</string>
+    <string name="deleteItem">Delete</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="etFragmentTitle">Edit Item Below</string>
     <string name="editFragmentSaveButton">Save</string>
+    <color name="todoPrimary">#75C1C2</color>
+    <color name="todoPrimaryDark">#477576</color>
+
+
+    <string-array name="priority_string_array_values">
+        <item>@string/priority_low</item>
+        <item>@string/priority_medium</item>
+        <item>@string/priority_high</item>
+    </string-array>
+    <string-array name="status_string_array_values">
+        <item>@string/status_is_not_completed</item>
+        <item>@string/status_is_completed</item>
+    </string-array>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="todo_details">Task Details</string>
+    <string name="todo">Task</string>
+    <string name="todo_label">To do</string>
+    <string name="todo_hint">Enter a task to-do</string>
+
+    <string name="due_date_label">Due Date</string>
+
+    <string name="priority_label">Priority Level</string>
+    <string name="priority_high">HIGH</string>
+    <string name="priority_medium">MEDIUM</string>
+    <string name="priority_low">LOW</string>
+
+    <string name="status_label">Status</string>
+    <string name="status_is_completed">DONE</string>
+    <string name="status_is_not_completed">TO-DO</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirm_cancel">Are you sure you want to cancel editing this task?</string>
+    <string name="clear">Clear</string>
+    <string name="title_activity_todo_item_detail">TodoItemDetailActivity</string>
+
 </resources>
