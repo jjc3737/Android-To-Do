@@ -47,5 +47,6 @@
     <string name="confirm_cancel">Are you sure you want to cancel editing this task?</string>
     <string name="clear">Clear</string>
     <string name="title_activity_todo_item_detail">TodoItemDetailActivity</string>
+    <string name="title_activity_main_activity">MainActivity</string>
 
 </resources>

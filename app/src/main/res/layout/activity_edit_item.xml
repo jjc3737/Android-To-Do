@@ -13,23 +13,63 @@
         android:stretchColumns="0" >
 
         <TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:padding="1dip"
+                    android:text="@string/todo_label"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/todoPrimaryDark"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTodoTitle"/>
 
-            <TextView
-                android:padding="1dip"
-                android:text="@string/todo_label"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textColor="@color/todoPrimaryDark"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/et_todo_title"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/todo_hint"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/et_todo_title"
-                android:ems="10"
-                android:gravity="left"
-                android:hint="@string/todo_hint"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="@color/todoPrimary" />
+
+        <TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/todoPrimaryDark"
+                    android:text="@string/due_date_label"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTodoDueDate"/>
+
+                <DatePicker
+                    android:id="@+id/date_picker_due_date"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </TableRow>
 
         <View
@@ -38,17 +78,33 @@
 
         <TableRow>
 
-            <TextView
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textColor="@color/todoPrimaryDark"
-                android:text="@string/due_date_label"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:padding="1dip"
+                    android:text="@string/priority_label"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/todoPrimaryDark"
+                    android:layout_width="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTodoPriority"/>
 
-            <DatePicker
-                android:id="@+id/date_picker_due_date"
-                android:calendarViewShown="true" />
+                <Spinner
+                    android:id="@+id/spinner_priority"
+                    android:layout_weight="1"
+                    android:entries="@array/priority_string_array_values"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
         </TableRow>
 
         <View
@@ -57,48 +113,31 @@
 
         <TableRow>
 
-            <TextView
-                android:padding="1dip"
-                android:text="@string/priority_label"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textStyle="bold"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textColor="@color/todoPrimaryDark"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/todoPrimaryDark"
+                    android:text="@string/status_label"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/tvTodoStatus"
+                    android:layout_height="wrap_content"/>
 
-            <Spinner
-                android:id="@+id/spinner_priority"
-                android:layout_weight="1"
-                android:entries="@array/priority_string_array_values"
-                android:gravity="right"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                />
-        </TableRow>
-
-        <View
-            android:layout_height="1dip"
-            android:background="@color/todoPrimary" />
-
-        <TableRow>
-
-            <TextView
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textColor="@color/todoPrimaryDark"
-                android:text="@string/status_label"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/spinner_status"
-                android:entries="@array/status_string_array_values"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                <Spinner
+                    android:id="@+id/spinner_status"
+                    android:entries="@array/status_string_array_values"
+                    android:layout_weight="1"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
 
         </TableRow>
     </TableLayout>
