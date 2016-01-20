@@ -47,7 +47,7 @@ public class TodoItemAdapter extends ArrayAdapter {
         View vDone = (View) convertView.findViewById(R.id.vDone);
 
         //Custom font
-        Typeface custom_font = Typeface.createFromAsset(getContext().getAssets(),  "fonts/Luna.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getContext().getAssets(),  "fonts/GothamBook.ttf");
 
         tvTitle.setTypeface(custom_font);
 
