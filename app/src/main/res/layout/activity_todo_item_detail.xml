@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/todo_label"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="To do"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:textColor="@color/todoPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/todo_content"
+                android:gravity="right"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="@color/todoPrimary" />
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/due_date_label"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Due Date"
+                android:textColor="@color/todoPrimaryDark"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/due_date_content"
+                android:gravity="right"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="@color/todoPrimary" />
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/priority_label"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Priority Level"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/todoPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/priority_content"
+                android:gravity="right"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="HIGH"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="@color/todoPrimary" />
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/is_completed_label"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Status"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:textColor="@color/todoPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/is_completed_content"
+                android:gravity="right"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="To-Do"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>
