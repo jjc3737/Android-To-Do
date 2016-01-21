@@ -24,7 +24,7 @@ The following optional features are implemented:
 
 The following additional features are implemented: 
 
-* Sort the list by priority 
+* Sort the list by completion and then by priority 
 * UI/UX change for when tasks are finished 
 * Added splash screen
 * Custom fonts
@@ -35,7 +35,7 @@ The following additional features are implemented:
 Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/)
 
-<img src='http://i.imgur.com/sLtSIp5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/uK1piPd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes 
 Want to sort through the array once again with completed and non completed task. A way to click item for done on the main acivity.  
