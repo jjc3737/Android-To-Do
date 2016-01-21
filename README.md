@@ -4,7 +4,7 @@ Android-To-Do is an android app thatallows building a todo list and basic todo i
 
 Submittied by: Jane Chung 
 
-Time spent: 13 hours spent in total 
+Time spent: 14 hours spent in total 
 
 ## User Stories 
 The following required functionality is completed:
@@ -24,18 +24,19 @@ The following optional features are implemented:
 
 The following additional features are implemented: 
 
-* Sort the list by priority 
+* Sort the list by completion and then by priority 
 * UI/UX change for when tasks are finished 
 * Added splash screen
 * Custom fonts
+* App icon 
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/)
 
-<img src='http://i.imgur.com/uGliS6o.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/uK1piPd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes 
-I plan to spend more time getting more of the optional features done. The only frustration was everything required looking up the definition and docs. Also, learning SQLite took some time since it was my first time using it. 
+Want to sort through the array once again with completed and non completed task. A way to click item for done on the main acivity.  
 
