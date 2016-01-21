@@ -44,7 +44,6 @@ public class TodoItemAdapter extends ArrayAdapter {
         TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
         TextView tvPriority = (TextView) convertView.findViewById(R.id.tvPriority);
         TextView tvDueDate = (TextView) convertView.findViewById(R.id.tvDueDate);
-        View vDone = (View) convertView.findViewById(R.id.vDone);
 
         //Custom font
         Typeface custom_font = Typeface.createFromAsset(getContext().getAssets(),  "fonts/GothamBook.ttf");
@@ -67,10 +66,6 @@ public class TodoItemAdapter extends ArrayAdapter {
             color = Color.parseColor("#ff5050");
 
         }
-
-
-        tvPriority.setText(textToDisplay);
-
         //Show Due date
         Calendar dueDate = item.getDueDate();
 
@@ -80,19 +75,19 @@ public class TodoItemAdapter extends ArrayAdapter {
         tvDueDate.setText(date);
 
         int greyedOut = Color.parseColor("#b2b1b1");
-        int black = Color.parseColor("#000000");
-
-        //Show line & grey out if done
+        int darkGrey = Color.parseColor("#545252");
+        int middleGrey = Color.parseColor("#7c7b7b");
+        //Show greyed out and say DONE
         if (item.isCompleted == 1) {
-            vDone.setVisibility(View.VISIBLE);
             tvTitle.setTextColor(greyedOut);
             tvPriority.setTextColor(greyedOut);
             tvDueDate.setTextColor(greyedOut);
+            tvPriority.setText("DONE");
         } else {
-            vDone.setVisibility(View.INVISIBLE);
-            tvTitle.setTextColor(black);
+            tvTitle.setTextColor(darkGrey);
             tvPriority.setTextColor(color);
-            tvDueDate.setTextColor(black);
+            tvDueDate.setTextColor(middleGrey);
+            tvPriority.setText(textToDisplay);
         }
 
         // Return the completed view to render on screen

@@ -10,7 +10,7 @@ import com.codepath.simpletodo.R;
 public class SplashScreen extends AppCompatActivity {
 
     // show splash screen for this duration
-    private static int SPLASH_DURATION = 3000;
+    private static int SPLASH_DURATION = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
