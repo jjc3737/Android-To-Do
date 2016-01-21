@@ -113,9 +113,12 @@ public class MainActivity extends AppCompatActivity  {
         Collections.sort(items, new Comparator<TodoItem>() {
             @Override
             public int compare(TodoItem lhs, TodoItem rhs) {
+                Integer completedLeft = lhs.getIsCompleted();
+                Integer completedRight = rhs.getIsCompleted();
+                int doneComparison = completedLeft.compareTo(completedRight);
                 Integer left = lhs.gePriority();
                 Integer right = rhs.gePriority();
-                return right.compareTo(left);
+                return doneComparison == 0 ? right.compareTo(left) : doneComparison;
             }
         });
     }
