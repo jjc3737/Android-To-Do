@@ -2,10 +2,12 @@ package com.codepath.simpletodo.View;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 
+import com.codepath.simpletodo.Activities.MainActivity;
+import com.codepath.simpletodo.Activities.TodoItemDetailActivity;
 import com.codepath.simpletodo.Model.TodoItem;
 import com.codepath.simpletodo.Model.TodoItemDatabase;
 import com.codepath.simpletodo.R;
@@ -28,6 +30,8 @@ public class DeleteDialog {
         confirmCancelDialog.show();
     }
 
+
+
     // An inner class to handle event when user select Yes button on Confirm Cancel dialog
     private static class YesDeleteButtonListener implements OnClickListener {
 
@@ -44,9 +48,13 @@ public class DeleteDialog {
         @Override
         public void onClick(DialogInterface dialog, int which) {
             db.deleteTodoItem(todo);
-            Intent returnIntent = new Intent();
-            sourceActivity.setResult(Activity.RESULT_OK, returnIntent);
-            sourceActivity.finish();
+            if (sourceActivity instanceof TodoItemDetailActivity) {
+                Intent returnIntent = new Intent();
+                sourceActivity.setResult(Activity.RESULT_OK, returnIntent);
+                sourceActivity.finish();
+            } else if (sourceActivity instanceof MainActivity) {
+                ((MainActivity) sourceActivity).refreshData();
+            }
         }
 
     }

@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.codepath.simpletodo.Model.TodoItem;
 import com.codepath.simpletodo.Model.TodoItemDatabase;
 import com.codepath.simpletodo.R;
+import com.codepath.simpletodo.View.DeleteDialog;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -48,6 +49,15 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+
+        lvItems.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                TodoItem todo = items.get(position);
+                DeleteDialog.showConfirmDeleteDialogForTodoItem(MainActivity.this, todo, db);
+                return true;
+            }
+        });
         //instantiate database and get all to do items from SQLite
         db = TodoItemDatabase.getsInstance(this);
         populateItems();
@@ -80,7 +90,7 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
-    private void refreshData() {
+    public void refreshData() {
         this.items = this.db.getAllTodoItems();
         sortItems();
         this.adapter.refreshTodoItems(this.items);
