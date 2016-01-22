@@ -4,7 +4,7 @@ Android-To-Do is an android app thatallows building a todo list and basic todo i
 
 Submittied by: Jane Chung 
 
-Time spent: 14 hours spent in total 
+Time spent: 14.5 hours spent in total 
 
 ## User Stories 
 The following required functionality is completed:
@@ -29,13 +29,14 @@ The following additional features are implemented:
 * Added splash screen
 * Custom fonts
 * App icon 
+* Delete available on Main page (long click) and detail page
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/)
 
-<img src='http://i.imgur.com/uK1piPd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/TPTyxrn.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes 
 Want to sort through the array once again with completed and non completed task. A way to click item for done on the main acivity.  
